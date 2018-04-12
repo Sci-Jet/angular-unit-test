@@ -26,4 +26,8 @@ export class DetailComponent implements OnInit {
       'collection': 1
     };
   }
+
+  click() {
+    this.detail.address = '共富二村';
+  }
 }
