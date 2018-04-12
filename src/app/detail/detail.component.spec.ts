@@ -32,4 +32,5 @@ describe('DetailComponent', () => {
     component.getById(1);
     expect(component.detail.name).toEqual('Byron Dong');
   });
+
 });
