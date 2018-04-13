@@ -11,7 +11,7 @@ export class DetailComponent implements OnInit {
   detail: any = {};
   name: string;
 
-  constructor(private nameService: SomeNameService) { }
+  constructor(public nameService: SomeNameService) { }
 
   ngOnInit() {
     this.getById(1);
