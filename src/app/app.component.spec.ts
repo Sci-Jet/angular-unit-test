@@ -1,5 +1,5 @@
 import { SomeNameService } from './services/some-name.service';
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, inject } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 import { DetailComponent } from './detail/detail.component';
@@ -33,4 +33,6 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
   }));
+
+
 });
