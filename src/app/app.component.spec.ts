@@ -1,8 +1,10 @@
+import { SomeNameService } from './services/some-name.service';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 import { DetailComponent } from './detail/detail.component';
 import { PhonePipe } from './pipes/phone.pipe';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -12,6 +14,7 @@ describe('AppComponent', () => {
         DetailComponent, // 因为app.component.ts中使用了DetailComponent，所以这里也要声明，app.module.ts里面的声明这里用不上
         PhonePipe
       ],
+      providers: [SomeNameService]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

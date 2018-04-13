@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DetailComponent } from './detail.component';
 import { PhonePipe } from '../pipes/phone.pipe';
+import { SomeNameService } from '../services/some-name.service';
 
 describe('DetailComponent', () => {
   let component: DetailComponent;
@@ -11,16 +12,19 @@ describe('DetailComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         DetailComponent,
-        PhonePipe
-      ]
+        PhonePipe,
+      ],
+      providers: [SomeNameService]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
+
     fixture = TestBed.createComponent(DetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
   });
 
   it('should create', () => {

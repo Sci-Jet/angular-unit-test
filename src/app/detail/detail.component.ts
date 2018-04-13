@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SomeNameService } from '../services/some-name.service';
 
 @Component({
   selector: 'app-detail',
@@ -8,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class DetailComponent implements OnInit {
 
   detail: any = {};
+  name: string;
 
-  constructor() { }
+  constructor(private nameService: SomeNameService) { }
 
   ngOnInit() {
     this.getById(1);
+    this.name = this.nameService.getNameById(1);
   }
 
   getById(id: number) {
